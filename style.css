@@ -1,0 +1,189 @@
+.landing-page-header{
+    height: 96px;
+    font-family: Open Sans;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 54px;
+    line-height: 74px;
+    text-align: right;
+
+    /* Brand Blue */
+    background: #1E3575
+}
+
+.dte-wordmark{
+    text-align: center;
+    padding-top: 22px;
+
+    /* White */
+    color: #FFFFFF;
+}
+
+.landing-page-hero{
+    height: 330px;
+    position: relative;
+    margin-bottom: 25px;
+}
+
+.hero-img{
+    position: absolute;
+}
+
+.hero-h1{
+    position: absolute;
+    font-family: Open Sans;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 54px;
+    line-height: 74px;
+    text-align: right;
+    margin-top: 80px;
+    margin-bottom: 100px;
+}
+
+.landing-page-program .landing-page-program-video video{
+    width: 480px;
+    height: 270px;
+
+}
+
+.landing-page-program .landing-page-program-video .video 
+    .playpause {
+        background-image:url(http://png-4.findicons.com/files/icons/2315/default_icon/256/media_play_pause_resume.png);
+        background-repeat:no-repeat;
+        width:50%;
+        height:50%;
+        position:absolute;
+        left:0%;
+        right:0%;
+        top:0%;
+        bottom:0%;
+        margin:auto;
+        background-size:contain;
+        background-position: center;
+    }
+
+.landing-page-program .btn-primary {
+    border-radius: unset;
+    background-color: #0072CE;
+}
+    
+.grey-title{
+    font-family: Open Sans;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 22px;
+
+    /* Darkest Gray */
+
+    color: #505357;
+    mix-blend-mode: normal;
+}
+
+.container {
+    margin-bottom: 25px;
+}
+
+.peak-hours-img{
+    width: 240px;
+    height: 220px;
+}
+
+.peak-hours-container{
+    margin: 70px 0 70px 0;
+}
+
+.peak-hours-text-bold{
+    font-family: Open Sans;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 26px;
+    line-height: 114.68%;
+    /* or 30px */
+
+
+    color: #664884;
+}
+
+.peak-hours-text{
+    font-family: Open Sans;
+    font-style: normal;
+    font-size: 26px;
+    line-height: 114.68%;
+    /* or 30px */
+
+
+    color: #664884;
+}
+
+.show-more, .show-less{
+    font-family: Open Sans;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 22px;
+    /* identical to box height */
+
+    display: flex;
+    align-items: center;
+
+    /* Blue */
+
+    color: #0072CE !important;
+
+}
+
+.lined-heading{
+    padding: 0;
+}
+
+.lined-heading h2 {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-family: Open Sans;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 22px;
+    line-height: 30px;
+    /* identical to box height */
+
+    text-align: center;
+
+    /* gray-3 */
+
+    color: #73767B;
+    /* White */
+
+    border: 8px solid #FFFFFF;
+}
+
+.lined-heading h2:before,
+.lined-heading h2:after {
+    content: '';
+    border-top: 2px solid;
+    margin: 10px 20px 0 0;
+    flex: 1 0 20px;
+    border-collapse: #D9D9D9;
+}
+
+.lined-heading h2:after {
+    margin: 10px 0 0 20px;
+}
+
+/* .show-more, .show-less 
+    :after {
+        display: block;
+        content: ' ';
+        background-image: url('resources/images/r-chev.svg');
+        background-size: 28px 28px;
+        height: 10px;
+        width: 5px;
+} */
+
+.card-deck .card{
+    min-height: 350px;
+}

@@ -436,7 +436,7 @@ body {
   }
 
   @media screen and (min-width:576px){
-      
+
     .peak-hours-container{
         margin: 70px 0;
     }
@@ -449,14 +449,42 @@ body {
 
   @media screen and (max-width:576px){
 
+    .landing-page-hero {
+        display: block;
+        width: 100%;
+        height: auto;
+        position: relative;
+        overflow: hidden;
+        padding: 34.37% 0 0 0;
+    }
+
+    .hero-img {
+        display: block;
+        max-width: 100%;
+        max-height: 100%;
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+    }
+
     .landing-page-program-text {
         margin-bottom: 30px;
+    }
+
+    .hero-container {
+        position: absolute;
+        top: 0;
+        bottom: 0;
     }
 
     .landing-page-hero .hero-h1 {
         font-size: 20px;
         line-height: 27px;
         text-align: right;
+        position: relative;
+        margin: 10px 80px 10px 10px;
     }
 
     .landing-page-program .program-title {

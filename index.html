@@ -1,20 +1,22 @@
 <!DOCTYPE html>
 <head>
+    <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Open+Sans" />
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <script src="script.js"></script>
     <link rel="stylesheet" href="style.css">
 </head>
 <html>
 <body>
 
     <div class="container-fluid landing-page-header">
-        <h1 class="dte-wordmark">DTE</h1>
+        <img class="dte-wordmark" src="resources\images\DTE-Wordmark.png">
     </div>
     <div class="landing-page-hero">
         <img class="hero-img" src="resources\images\COCO_DTE_DAY2-422.png">
-        <div class="col-sm-6">
+        <div class="col-sm-5">
             <h1 class="hero-h1">Take More Control of Your Energy Bill</h1>
         </div>
     </div>
@@ -23,18 +25,18 @@
         <div class="row">
             <div class="col-sm-6 landing-page-program-video">
                 <video controls poster="resources\images\video-thumbnail.png">
-                    <source src="movie.mp4" type="video/mp4">
-                    <source src="movie.ogg" type="video/ogg">
+                    <source src="#" type="video/mp4">
+                    <source src="#" type="video/ogg">
                     Your browser does not support the video tag.
                     <div class="playpause"></div>
                 </video>
             </div>
             <div class="col-sm-6 landing-page-program-text">
-                <h2>Shift & Save Pilot Program</h2>
+                <h1 class="program-title">Shift & Save Pilot Program</h1>
                 <hr>
                 <p>Welcome to Shift & Save - a new way of pricing energy that puts YOU more in control.</p>
                 <p>Shift some of your electricity use to times during the day when electricity rates are lower – anytime outside 3 p.m. to 7 p.m. weekdays – and you will reduce your energy costs.</p>
-                <button class="btn btn-primary col-lg-12" type="submit">Join Now</button>
+                <button class="btn btn-primary col-lg-12" type="submit">Get Started</button>
             </div>
         </div>
     </div>
@@ -57,17 +59,46 @@
         <p class="">Shift & Save puts you in control when you know about Peak Hours and Off-Peak Hours.</p>
         <p>• Peak Hours – 3:00 p.m. to 7:00 p.m. every weekday – when electricity rates and electricity demand are at their highest.</p>
         <p> • Off-Peak Hours - 20 hours every weekday and all weekend hours with a lower electricity rate when you participate in   Shift & Save.</p>
-        <a class="show-more">Show More</a>
-        <div class="show-less-container">
-            <a class="show-less">Show Less</a>
-            <p>Shift from Peak Hours for a lower rate. Peak Hours are 3 p.m. to 7 p.m., Monday – Friday, year-round.</p>
-            <hr>
+        <div class="incentives">
+            <div class="card mb-3">
+                <div class="row no-gutters">
+                  <div class="col-md-6">
+                    <div class="card-body">
+                      <p class="card-text">Get $75 in incentives! Complete three surveys during the one-year program.</p>
+                      <p class="card-text">Receive a free, one-year subscription to the DTE Energy Bridge and download the free <a href="#"> DTE Insight App</a>.</p>
+                      <button class="btn btn-primary col-lg-8" type="submit">Get Started</button>
+                    </div>
+                  </div>
+                    <div class="col-md-6">
+                        <img src="resources\images\COCO_DTE_DAY1_35A2444_new 1.png" class="card-img" alt="...">
+                      </div>
+                  </div>
+                </div>
+              </div>
+              <div class="container col-lg-12 show-more-container">
+                <div class="row">
+                  <a id="toggleButton" onclick="toggleShowMore();" href="javascript:void(0);">
+                    Show More           
+                  </a>
+                  <img class="chevron" src="resources\images\r-chev.png">
+                </div>
+                <div class="more-info" id="showMoreDiv" style="display: none;">
+                  <div class="show-more-text">
+                    <p class="bold"> What’s in it for you?</p>
+                    <p>Simple changes in your schedule can lower what you pay.</p>
+                    <p>Get free energy management tools to help track your usage.</p> 
+                    <p>Shift & Save is a pilot program designed with the State to help better manage demand on the grid, protect Michigan’s environment, and give you more control of your energy bill. There is no fee to join and no additional equipment is required.</p>
+                  </div>
+                  <div class="show-more-text">
+                    <p class="bold">How it works</p>
+                    <p>Your electricity use is measured in kilowatts and you are charged a kilowatts-per-hour (kWh) rate. That rate is lower during Off-Peak hours. It’s also different in summer months (June through September) than it is the rest of the year (October through May), as you can see in the illustration below.</p>
+                  </div>
+                  <img class="summer" src="resources\images\summer.png">
+                  <img class="non-summer" src="resources\images\non summer.png">
+                  <hr>
+                </div>
+            </div>
         </div>
-        <div class="more-info">
-            <p>Shift & Save is a pilot program designed with the State to help better manage demand on the grid, protect Michigan’s environment, and give you more control of your energy bill. There is no fee to join and no additional equipment is required.</p>
-            <p>Your electricity use is measured in kilowatts and you are charged a kilowatts-per-hour (kWh) rate. That rate is different during summer months (June through September) and the rest of the year (October through May), as you can see in the illustration below.</p>
-        </div>
-        <hr>
     </div>
     <div class="container col-xs-12">
         <div class="row">
@@ -81,12 +112,12 @@
         </div>
     </div>
 
-    <div class="container">
-            <div class="row">
-                    <div class="lined-heading col-lg-12">
-                        <h2>Saving Tips</h2>
-                    </div>
+    <div class="container saving-tips">
+        <div class="row">
+                <div class="lined-heading col-lg-12">
+                    <h2>Saving Tips</h2>
                 </div>
+        </div>
         <div class="row">
             <div class="card-deck">
                     <div class="card">
@@ -118,8 +149,244 @@
                     </div>
                   </div>
         </div>
+        <div class="row download-tips-container">
+          <img class="download-image" src="resources\images\download-tips.png">
+          <p class="download-tips">Download all tips</p>
+          <img class="chevron" src="resources\images\r-chev.png">
+        </div>
     </div>
 
+    <div class="container FAQ-accordion">
+        <div class="row">
+                <div class="lined-heading col-lg-12">
+                    <h2>Frequently Asked Questions</h2>
+                </div>
+        </div>
+        <div class="row">
+            <div class="accordion" id="faq-accordion-container">
+                <div class="card">
+                  <div class="card-header" id="headingOne accordion-header" onclick="toggleMinus();">
+                    <div class="row">
+                        <img class="plus" src="resources\images\plus.svg">
+                        <h2 class="mb-0">
+                          <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+                            Collapsible Group Item #1
+                          </button>
+                        </h2>
+                    </div>
+                  </div>
+              
+                  <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#faq-accordion-container">
+                    <div class="card-body">
+                      Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+                    </div>
+                  </div>
+                </div>
+                <div class="card">
+                  <div class="card-header" id="headingTwo accordion-header">
+                      <div class="row">
+                          <img class="plus" src="resources\images\plus.svg">
+                          <h2 class="mb-0">
+                            <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                              Collapsible Group Item #2
+                            </button>
+                          </h2>
+                      </div>
+                  </div>
+                  <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#faq-accordion-container">
+                    <div class="card-body">
+                      Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+                    </div>
+                  </div>
+                </div>
+                <div class="card">
+                    <div class="card-header" id="headingThree accordion-header" onclick="toggleMinus();">
+                        <div class="row">
+                            <img class="plus" src="resources\images\plus.svg">
+                            <h2 class="mb-0">
+                              <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                                Collapsible Group Item #3
+                              </button>
+                            </h2>
+                        </div>
+                    </div>
+                    <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#faq-accordion-container">
+                      <div class="card-body">
+                        Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+                      </div>
+                    </div>
+                </div>
+                <div class="card">
+                <div class="card-header" id="headingFour accordion-header" onclick="toggleMinus();">
+                    <div class="row">
+                        <img class="plus" src="resources\images\plus.svg">
+                        <h2 class="mb-0">
+                          <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                            Collapsible Group Item #4
+                          </button>
+                        </h2>
+                    </div>
+                </div>
+                <div id="collapseFour" class="collapse" aria-labelledby="headingFour" data-parent="#faq-accordion-container">
+                    <div class="card-body">
+                    Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+                    </div>
+                </div>
+                </div>
+                <div class="card">
+                <div class="card-header" id="headingFive accordion-header" onclick="toggleMinus();">
+                    <div class="row">
+                        <img class="plus" src="resources\images\plus.svg">
+                        <h2 class="mb-0">
+                          <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
+                            Collapsible Group Item #5
+                          </button>
+                        </h2>
+                    </div>
+                </div>
+                <div id="collapseFive" class="collapse" aria-labelledby="headingFive" data-parent="#faq-accordion-container">
+                    <div class="card-body">
+                    Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+                    </div>
+                </div>
+                </div>
+                <div class="card">
+                <div class="card-header" id="headingSix accordion-header" onclick="toggleMinus();">
+                    <div class="row">
+                        <img class="plus" src="resources\images\plus.svg">
+                        <h2 class="mb-0">
+                          <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseSix" aria-expanded="false" aria-controls="collapseSix">
+                            Collapsible Group Item #6
+                          </button>
+                        </h2>
+                    </div>
+                </div>
+                <div id="collapseSix" class="collapse" aria-labelledby="headingSix" data-parent="#faq-accordion-container">
+                    <div class="card-body">
+                    Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+                    </div>
+                </div>
+                </div>
+                <div class="card">
+                <div class="card-header" id="headingSeven accordion-header" onclick="toggleMinus();">
+                    <div class="row">
+                        <img class="plus" src="resources\images\plus.svg">
+                        <h2 class="mb-0">
+                          <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseSeven" aria-expanded="false" aria-controls="collapseSeven">
+                            Collapsible Group Item #7
+                          </button>
+                        </h2>
+                    </div>
+                </div>
+                <div id="collapseSeven" class="collapse" aria-labelledby="headingSeven" data-parent="#faq-accordion-container">
+                    <div class="card-body">
+                    Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+                    </div>
+                </div>
+                </div>
+                <div class="card">
+                <div class="card-header" id="headingEight accordion-header" onclick="toggleMinus();">
+                    <div class="row">
+                        <img class="plus" src="resources\images\plus.svg">
+                        <h2 class="mb-0">
+                          <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseEight" aria-expanded="false" aria-controls="collapseOne">
+                            Collapsible Group Item #8
+                          </button>
+                        </h2>
+                    </div>
+                </div>
+                <div id="collapseEight" class="collapse" aria-labelledby="headingEight" data-parent="#faq-accordion-container">
+                    <div class="card-body">
+                    Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+                    </div>
+                </div>
+                </div>
+                <div class="card">
+                <div class="card-header" id="headingNine accordion-header" onclick="toggleMinus();">
+                    <div class="row">
+                        <img class="plus" src="resources\images\plus.svg">
+                        <h2 class="mb-0">
+                          <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseNine" aria-expanded="false" aria-controls="collapseNine">
+                            Collapsible Group Item #9
+                          </button>
+                        </h2>
+                    </div>
+                </div>
+                <div id="collapseNine" class="collapse" aria-labelledby="headingNine" data-parent="#faq-accordion-container">
+                    <div class="card-body">
+                    Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+                    </div>
+                </div>
+                </div>
+                <div class="card">
+                <div class="card-header" id="headingTen accordion-header" onclick="toggleMinus();">
+                    <div class="row">
+                        <img class="plus" src="resources\images\plus.svg">
+                        <h2 class="mb-0">
+                          <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseTen" aria-expanded="false" aria-controls="collapseTen">
+                            Collapsible Group Item #10
+                          </button>
+                        </h2>
+                    </div>
+                </div>
+                <div id="collapseTen" class="collapse" aria-labelledby="headingTen" data-parent="#faq-accordion-container">
+                    <div class="card-body">
+                    Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+                    </div>
+                </div>
+                </div>
+                <div class="card">
+                <div class="card-header" id="headingEleven accordion-header" onclick="toggleMinus();">
+                    <div class="row">
+                        <img class="plus" src="resources\images\plus.svg">
+                        <h2 class="mb-0">
+                          <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseEleven" aria-expanded="false" aria-controls="collapseEleven">
+                            Collapsible Group Item #11
+                          </button>
+                        </h2>
+                    </div>
+                </div>
+                <div id="collapseEleven" class="collapse" aria-labelledby="headingEleven" data-parent="#faq-accordion-container">
+                    <div class="card-body">
+                    Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+                    </div>
+                </div>
+                </div>
+              </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="insights-app">
+            <div class="card mb-3">
+                <div class="row no-gutters">
+                  <div class="col-md-6">
+                        <img src="resources\images\01_Insight_See_Your_Home 1.png" class="card-img" alt="...">
+                      </div>
+                  <div class="col-md-6">
+                    <div class="card-body">
+                      <p class="card-text insight-app-title">DTE Insight App & Energy Bridge</p>
+                      <p class="card-text">Download the free DTE Insight App to help you understand your home energy use. As a participant in the pilot you will receive a free, one-year subscription to the Energy Bridge. Together, the Insight App and Energy Bridge put you in control of your energy use.</p>
+                      <div class="badges">
+                        <img class="apple-badge" src="resources\images\apple-app-store-badge 1.png">
+                        <img class="android-badge" src="resources\images\en_badge_web_generic 1.png">
+                      </div>
+                    </div>
+                  </div>
+                    
+                  </div>
+                </div>
+              </div>
+    </div>
+    <div class="container-fluid landing-page-footer">
+        <div class="row footer-links">
+          <a href="#">Privacy Policy</a>
+          |
+          <a href="#">Terms & Conditions</a>
+        </div>
+        <div class="row copyright-container">
+            <p class="copyright">&copy; 2019 DTE Energy. All rights reserved.<p>
+        </div>
+    </div>
 
 </body>
 </html>

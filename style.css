@@ -1,3 +1,49 @@
+
+h1 { 
+    font-family: "Open Sans"; 
+    font-size: 24px; 
+    font-style: normal; 
+    font-variant: normal; 
+    font-weight: 700; 
+    line-height: 26.4px; 
+} 
+
+h3 { 
+    font-family: "Open Sans"; 
+    font-size: 14px; 
+    font-style: normal; 
+    font-variant: normal; 
+    font-weight: 700; 
+    line-height: 15.4px; 
+} 
+
+p { 
+    font-family: "Open Sans"; 
+    font-size: 14px; 
+    font-style: normal; 
+    font-variant: normal; 
+    font-weight: 400; 
+    line-height: 20px; 
+} 
+
+blockquote { 
+    font-family: "Open Sans"; 
+    font-size: 21px; 
+    font-style: normal; 
+    font-variant: normal; 
+    font-weight: 400; 
+    line-height: 30px; 
+} 
+
+pre { 
+    font-family: "Open Sans"; 
+    font-size: 13px; 
+    font-style: normal; 
+    font-variant: normal; 
+    font-weight: 400; 
+    line-height: 18.5714px; 
+}
+
 .landing-page-header{
     height: 96px;
     font-family: Open Sans;
@@ -8,15 +54,14 @@
     text-align: right;
 
     /* Brand Blue */
-    background: #1E3575
+    background: #1E3575;
+    width: 100%;
+    text-align: center;
 }
 
 .dte-wordmark{
-    text-align: center;
-    padding-top: 22px;
-
-    /* White */
-    color: #FFFFFF;
+    display: inline-block;
+    margin: 0 auto;
 }
 
 .landing-page-hero{
@@ -27,11 +72,14 @@
 
 .hero-img{
     position: absolute;
+    width: 100%;
+    height: 330px;
+    object-fit: cover;
 }
 
 .hero-h1{
     position: absolute;
-    font-family: Open Sans;
+    font-family: "Open Sans";
     font-style: normal;
     font-weight: normal;
     font-size: 54px;
@@ -39,6 +87,11 @@
     text-align: right;
     margin-top: 80px;
     margin-bottom: 100px;
+
+}
+
+body {
+    font-family: "Open Sans";
 }
 
 .landing-page-program .landing-page-program-video video{
@@ -47,7 +100,25 @@
 
 }
 
-.landing-page-program .landing-page-program-video .video 
+.landing-page-program-video a{
+    display:inline-block;
+    position:relative;
+}
+.landing-page-program-video a:after{
+    background:url("resources\images\play-btn.png") center center no-repeat;
+    bottom:0;
+    content:"";
+    display:block;
+    left:0;
+    position:absolute;
+    right:0;
+    top:0;
+}
+.landing-page-program-video a:hover:after{
+  background-image:url("resources\images\play-btn.png");
+}
+
+.landing-page-program .landing-page-program-video 
     .playpause {
         background-image:url(http://png-4.findicons.com/files/icons/2315/default_icon/256/media_play_pause_resume.png);
         background-repeat:no-repeat;
@@ -63,14 +134,19 @@
         background-position: center;
     }
 
-.landing-page-program .btn-primary {
+.landing-page-program .btn-primary, .incentives .btn-primary {
     border-radius: unset;
     background-color: #0072CE;
 }
+
+.landing-page-program-text .program-title {
+    font-weight: 600px;
+    font-size: 30px;
+    line-height: 41px;
+    color: #2B2B2B;
+}
     
 .grey-title{
-    font-family: Open Sans;
-    font-style: normal;
     font-weight: bold;
     font-size: 16px;
     line-height: 22px;
@@ -95,7 +171,6 @@
 }
 
 .peak-hours-text-bold{
-    font-family: Open Sans;
     font-style: normal;
     font-weight: 600;
     font-size: 26px;
@@ -107,7 +182,6 @@
 }
 
 .peak-hours-text{
-    font-family: Open Sans;
     font-style: normal;
     font-size: 26px;
     line-height: 114.68%;
@@ -118,7 +192,6 @@
 }
 
 .show-more, .show-less{
-    font-family: Open Sans;
     font-style: normal;
     font-weight: bold;
     font-size: 16px;
@@ -184,6 +257,147 @@
         width: 5px;
 } */
 
-.card-deck .card{
+.saving-tips .card-deck .card{
     min-height: 350px;
 }
+
+.FAQ-accordion .card-header {
+    background-color: transparent;
+}
+
+.FAQ-accordion .card-header .btn-link {
+    font-style: normal;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 25px;
+    /* identical to box height */
+
+    display: flex;
+    align-items: center;
+
+    /* Blue */
+
+    color: #0072CE;
+}
+
+.FAQ-accordion .card-header{
+    width: 950px;
+    height: 50px;
+}
+
+.more-info .summer {
+    margin-bottom: 80px;
+}
+
+.incentives .card-text {
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 25px;
+    margin-bottom: 40px;
+}
+
+#toggleButton {
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 22px;
+    color: #0072CE;
+}
+
+.more-info {
+    margin-top: 30px;
+}
+
+.more-info .bold {
+    font-weight: bold;
+}
+
+.show-more-text {
+    margin-bottom: 45px;
+}
+
+.landing-page-program-video .playpause {
+    background-image: url("resources/images/play-btn.png");
+}
+
+.download-tips {
+    color: #0072CE;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 22px;
+    margin-right: 10px;
+    margin: 4px 10px 0 0;
+}
+
+.download-tips-container {
+    margin-top: 20px;
+}
+
+.download-tips-container .download-image {
+    width: 25px;
+    height: 30px;
+    margin-right: 15px;
+}
+
+.chevron {
+    width: 5px;
+    height: 10px;
+}
+
+.download-tips-container .chevron {
+    margin-top: 11px;
+}
+
+.show-more-container .chevron {
+    margin-left: 10px;
+    margin-top: 7px;
+}
+
+.header-active {
+    background-color: #1E3575;
+}
+
+.insights-app .insight-app-title {
+    font-size: 22px;
+    font-weight: 500px;
+    line-height: 30px;
+    margin-bottom: 20px;
+
+    /* Black */
+
+    color: #2B2B2B;
+}
+
+.badges {
+    margin: auto;
+    width: 80%;
+    padding: 10px;
+}
+
+.landing-page-footer {
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    color: white;
+    text-align: center;
+    background-color: #1E3575;
+    height: 200px;
+  }
+
+  .landing-page-footer a {
+    color: white;
+  }
+
+  .landing-page-footer .footer-links {
+    display: inline-block;
+    margin: 50px auto;
+  }
+
+  .copyright-container {
+    display: block;
+    margin: auto;
+  }
+
+  .copyright-container .copyright {
+    font-weight: bold;
+  }

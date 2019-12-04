@@ -44,6 +44,10 @@ pre {
     line-height: 18.5714px; 
 }
 
+a {
+    color: #0072CE;
+}
+
 .landing-page-header{
     height: 96px;
     font-family: Open Sans;
@@ -138,9 +142,14 @@ body {
         background-position: center;
     }
 
-.landing-page-program .btn-primary, .incentives .btn-primary {
+.btn-primary {
     border-radius: unset;
     background-color: #0072CE;
+}
+
+.btn-primary:disabled {
+    background-color: #0C2340;
+    border-color: #0C2340;
 }
 
 .landing-page-program-text .program-title {
@@ -396,43 +405,294 @@ body {
     height: 200px;
   }
 
-  .landing-page-footer a {
-    color: white;
-  }
+.landing-page-footer a {
+color: white;
+}
 
-  .landing-page-footer .footer-links {
-    display: inline-block;
-    margin: 50px auto;
-  }
+.landing-page-footer .footer-links {
+display: inline-block;
+margin: 50px auto;
+}
 
-  .footer-links a {
-    margin: 0 10px;
-  }
+.footer-links a {
+margin: 0 10px;
+}
 
-  .copyright-container {
-    display: block;
-    margin: auto;
-  }
+.copyright-container {
+display: block;
+margin: auto;
+}
 
-  .copyright-container .copyright {
-    font-weight: bold;
-  }
+.copyright-container .copyright {
+font-weight: bold;
+}
 
-  .contact {
-    display: table;
-    margin: 0 auto 25px auto;
-  }
+.contact {
+display: table;
+margin: 0 auto 25px auto;
+}
 
-  .contact .contact-text {
+.contact .contact-text {
+font-size: 16px;
+line-height: 22px;
+/* identical to box height */
+
+text-align: center;
+
+/* Darkest Gray */
+color: #505357;
+}
+
+.btn-primary:hover {
+background: #1E3575;
+}
+
+.modal-content {
+    background-color: transparent;
+    border: none;
+    border-radius: unset;
+    left: 50%;
+    transform: translate(-50%, 0);
+}
+
+.modal-header h3 {
+font-family: Open Sans;
+font-style: normal;
+font-weight: normal;
+font-size: 28px;
+line-height: 38px;
+display: flex;
+align-items: center;
+}
+
+.modal-body {
+background-color: white;
+border: 1px solid rgba(0,0,0,.2);
+}
+
+.modal-backdrop {
+background-color: white;
+}
+
+.modal-backdrop.show {
+opacity: 0.9;
+}
+
+.close{
+    opacity: unset;
+}
+
+.form-control {
+    border-radius: unset;
+}
+.modal-1 {
+    width: 350px;
+    height: 350px;
+}
+.modal-2 {
+    width: 950px;
+    height: 575px;
+} 
+
+.modal-3 {
+    width: 950px;
+    height: 295px;
+} 
+
+.modal-header {
+    border-bottom: unset;
+}
+
+.forgot-pass {
+font-weight: 600;
+font-size: 14px;
+line-height: 19px;
+text-transform: capitalize;
+}
+
+.terms-conditions-text {
+    background: #F5F5F5;
+    height: 215px;
+    margin: 12px 0 30px 0;
+}
+
+.terms-conditions-text p {
+    padding: 15px 15px 0 15px
+}
+
+.user {
+    border: 1.5px solid #F5F5F5;
+    margin: 0 115px 50px 115px;
+}
+
+.confirm-body {
+    padding: 50px auto;
+}
+
+.user-text {
+    margin: 25px auto 25px 25px;
+}
+
+.modal-2 .modal-body {
+    padding-top: 40px;
+    padding-bottom: 60px;
+}
+
+.shift-row {
+    padding-bottom: 30px;
+}
+
+.confirm-text {
+    padding: 30px;
+}
+
+.confirm-text p {
     font-size: 16px;
-    line-height: 22px;
-    /* identical to box height */
-    
+    line-height: 28px;
+}
+
+.accept {
+    display: inline-flex;
+    padding-top: 10px;  
+}
+
+.accept input {
+    margin: 15px 5px 5px 0;
+}
+
+.accept p {
+    margin: 10px 0px;
+}
+
+.accept button {
+    height: 45px;
+}
+
+.success-close{
+    margin: 0;
+    background-color: transparent;
     text-align: center;
-    
-    /* Darkest Gray */
-    
+    padding-bottom: 30px;
+}
+
+.success-close button {
+    width: 280px;
+    height: 45px;
+}
+
+.create-account {
+    font-weight: 600;
+}
+
+.create-account-row img {
+    padding-top: 2px;
+    width: unset;
+    height: unset;
+}
+
+.form-group input {
+    font-size: 14px;
+    line-height: 19px;
+}
+
+.accept {
+    display: block;
+    position: relative;
+    margin-bottom: 12px;
+    cursor: pointer;
+    font-size: 22px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+  }
+  
+/* The container */
+.check-box-container {
+    font-size: 14px;
+    line-height: 18px;
+    display: flex;
+    align-items: center;
+    text-align: right;
     color: #505357;
+    display: block;
+    position: relative;
+    padding: 3px 8px 8px 0;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+  }
+
+  .remember-me {
+    margin-right: 5px;
+  }
+
+  .check-box-text {
+    margin: 10px;
+  }
+  
+  /* Hide the browser's default checkbox */
+  .check-box-container input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+  }
+  
+  /* Create a custom checkbox */
+  .checkmark {
+    position: absolute;
+    top: 4px;
+    margin-left: 5px;
+    height: 16px;
+    width: 16px;
+    background-color: white;
+    border: 1px solid grey;
+    border-radius: 2px;
+  }
+  
+  /* On mouse-over, add a grey background color */
+  .check-box-container:hover input ~ .checkmark {
+    border: 1px solid #0072CE
+  }
+  
+  /* When the checkbox is checked, add a blue background */
+  .check-box-container input:checked ~ .checkmark {
+    background-color: #1E3575;
+  }
+  
+  /* Create the checkmark/indicator (hidden when not checked) */
+  .checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+  }
+  
+  /* Show the checkmark when checked */
+  .check-box-container input:checked ~ .checkmark:after {
+    display: block;
+  }
+  
+  /* Style the checkmark/indicator */
+  .check-box-container .checkmark:after {
+    left: 5px;
+    top: 1px;
+    width: 4.5px;
+    height: 9.5px;
+    border: solid white;
+    border-width: 0 2.3px 2.3px 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+  }
+
+  .accept .check-box-container .checkmark {
+    top: 0;
+    left: 0;
+    margin: 5px 5px 0 0;
   }
 
   @media screen and (min-width:576px){
@@ -481,10 +741,12 @@ body {
 
     .landing-page-hero .hero-h1 {
         font-size: 20px;
+        left: 0;
+        top: 0;
         line-height: 27px;
         text-align: right;
         position: relative;
-        margin: 10px 80px 10px 10px;
+        margin: 35px 148px 10px 0px;
     }
 
     .landing-page-program .program-title {
@@ -525,5 +787,26 @@ body {
     .non-summer-mobile {
         margin: auto;
         display: block;
+    }
+
+    .modal-2 {
+        width: auto;
+        height: auto;
+    }
+    .modal-2 .modal-body {
+        padding: unset;
+    }
+    .modal-2 .modal-body .user{
+        margin: unset;
+    }
+    .shift-row{
+        display: inline-block;
+        padding-bottom: 20px;
+        padding-top: 20px;
+    }
+
+    .modal-3 {
+        width: auto;
+        height: auto;
     }
   }

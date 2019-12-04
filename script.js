@@ -1,4 +1,3 @@
-var status = "less";
 
 function toggleShowMore()
 {
@@ -9,6 +8,15 @@ function toggleShowMore()
   } else {
     x.style.display = "none";
     document.getElementById("toggleButton").innerHTML = "Show More"
+  }
+}
+function toggleTerms()
+{
+    var x = document.getElementById("terms-div");
+  if (x.style.display === "none") {
+    x.style.display = "block";
+  } else {
+    x.style.display = "none";
   }
 }
 
@@ -26,7 +34,27 @@ function toggleShowMore()
 //     }
 //     toggle = !toggle; 
 // }
-$( document ).ready(function() {
+ $( document ).ready(function() {
+/*  $('.accept-terms button').attr("disabled", true);
+  $('.accept-terms .checkmark').click(function() {
+    console.log($('.accept-terms .btn'))
+    $('.accept-terms .btn').removeAttr('disabled');
+  if ($(this).is(':checked')) {
+  } else {
+  $('.accept-terms button').attr('disabled',true);}
+  }); */
+
+  $(".accept-terms .checkmark").click(function(){
+    console.log($('.accept-terms .btn'))
+    $('.accept-terms .btn').prop("disabled", false);
+    $(".accept-terms:input").prop("checked")
+    if ($(this).is(':checked')) {
+      $('.accept-terms .btn').prop("disabled", false);
+      } else {
+      $('.accept-terms .btn').attr('disabled',true);}
+ });
+
+ 
  $('.btn-link').on('click', function(){
      var $this = $(this);
     console.log( $this.text());
@@ -40,4 +68,7 @@ $( document ).ready(function() {
         $this.parent().siblings('.plus').attr('src','resources/images/plus.svg');
      }
  });
+
 });
+
+

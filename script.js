@@ -58,13 +58,15 @@ function toggleTerms()
  $('.btn-link').on('click', function(){
      var $this = $(this);
     console.log( $this.text());
-     if($this.parent().siblings().hasClass('plus')){
+     if($this.parent().sibling().child().hasClass('plus')){
+       console.log("hi")
         $this.parent().parent().parent().addClass('header-active');
-    $this.parent().siblings('.plus').attr('src','resources/images/minus.png');
-    $this.parent().siblings('.plus').addClass('minus');
-     }else{
-         console.log($this.parent().parent().parent())
+        $this.parent().siblings('.plus').attr('src','resources/images/minus.png');
+        $this.parent().siblings('.plus').addClass('minus');
+        $this.parent().siblings('.plus').removeClass('plus');
+     } else {
         $this.parent().parent().parent().removeClass('header-active');
+        $this.parent().siblings('.minus').addClass('plus');
         $this.parent().siblings('.plus').attr('src','resources/images/plus.svg');
      }
  });

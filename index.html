@@ -52,7 +52,7 @@
         </video>
     </div>
     <div class="container">
-        <p class="grey-title">Choose the Hours You Use Power</p>
+        <p class="grey-title font-weight-bold">Choose the Hours You Use Power</p>
         <p>You make the choices that best fit your household and your budget. Shift & Save encourages you to take advantage of lower rate periods during weekdays. A few small changes can make a difference. When you run your dishwasher, clothes dryer, and clothes washer before 3 p.m. and after 7 p.m., for example, you’ll pay less.</p>
     </div>
     <div class="container">
@@ -61,22 +61,29 @@
             <div class="col-sm-3">
                 <img class="peak-hours-img" src="resources\images\ACPP_clock_Artboard.png">
             </div>
-            <div class="col-sm-5 peak-hours-container">
+            <div class="col-sm-7 peak-hours-container">
                 <p class="peak-hours-text-bold">Shift away from Peak Hours for a lower rate.</p> 
                 <p class="peak-hours-text">Peak Hours are 3 p.m. to 7 p.m., Monday–Friday, year-round.</p>
             </div>
-            <div class="col-sm-2"></div>
+            <div class="col-sm-1"></div>
         </div>
         <p class="">Shift & Save puts you in control when you know about Peak Hours and Off-Peak Hours.</p>
-        <p>• Peak Hours – 3:00 p.m. to 7:00 p.m. every weekday – when electricity rates and electricity demand are at their highest.</p>
-        <p>• Off-Peak Hours - 20 hours every weekday and all weekend hours with a lower electricity rate when you participate in Shift & Save.</p>
-        <div class="incentives">
+        <ol>
+          <li>
+              Peak Hours – 3:00 p.m. to 7:00 p.m. every weekday – when electricity rates and electricity demand are at their highest.
+          </li>
+          <li>
+              Off-Peak Hours - 20 hours every weekday and all weekend hours with a lower electricity rate when you participate in Shift & Save.
+          </li>
+        </ol>
+      </div>
+        <div class="incentives container">
             <div class="card mb-3">
                 <div class="row no-gutters">
                   <div class="col-md-6 incentives-text">
                     <div class="card-body">
-                      <p class="card-text">Get $75 in incentives! Complete three surveys during the one-year program.</p>
-                      <p class="card-text">Receive a free, one-year subscription to the DTE Energy Bridge and download the free <a href="#"> DTE Insight App</a>.</p>
+                        <p class="card-text"><strong>Get $75 in incentives!</strong> Complete three surveys during the one-year program.</p>
+                        <p class="card-text"><strong>Free, one-year subscription</strong> to the DTE Energy Bridge and download the free <a href="#"> DTE Insight App</a>.</p>
                       <a href="#loginModal" role="button" class="btn btn-primary col-lg-8" data-toggle="modal">Get Started</a>
                     </div>
                   </div>
@@ -86,43 +93,38 @@
                   </div>
                 </div>
         </div>
-        <div class="container col-lg-12 show-more-container">
+        <div class="container show-more-container">
+          <a id="toggleButton" onclick="toggleShowMore();" href="javascript:void(0);">
+            Show More           
+          </a>
+          <img class="chevron" src="resources\images\r-chev.png">
+        </div>
+        <div class="more-info container" id="showMoreDiv" style="display: none;">
+          <div class="show-more-text">
+            <p class="bold"> What’s in it for you?</p>
+            <p>Simple changes in your schedule can lower what you pay.</p>
+            <p>Get free energy management tools to help track your usage.</p> 
+            <p>Shift & Save is a pilot program designed with the State to help better manage demand on the grid, protect Michigan’s environment, and give you more control of your energy bill. There is no fee to join and no additional equipment is required.</p>
+          </div>
+          <div class="show-more-text">
+            <p class="bold">How it works</p>
+            <p>Your electricity use is measured in kilowatts and you are charged a kilowatts-per-hour (kWh) rate. That rate is lower during Off-Peak hours. It’s also different in summer months (June through September) than it is the rest of the year (October through May), as you can see in the illustration below.</p>
+          </div>
+          <img class="summer d-none d-lg-block" src="resources\images\summer.png">
+          <img class="summer-mobile d-lg-none" src="resources\images\summer-mobile.png">
+          <img class="non-summer d-none d-lg-block" src="resources\images\non summer.png">
+          <img class="non-summer-mobile d-lg-none" src="resources\images\non-summer-mobile.png">
+          <hr>
           <div class="row">
-            <a id="toggleButton" onclick="toggleShowMore();" href="javascript:void(0);">
-              Show More           
-            </a>
-            <img class="chevron" src="resources\images\r-chev.png">
-          </div>
-          <div class="more-info" id="showMoreDiv" style="display: none;">
-            <div class="show-more-text">
-              <p class="bold"> What’s in it for you?</p>
-              <p>Simple changes in your schedule can lower what you pay.</p>
-              <p>Get free energy management tools to help track your usage.</p> 
-              <p>Shift & Save is a pilot program designed with the State to help better manage demand on the grid, protect Michigan’s environment, and give you more control of your energy bill. There is no fee to join and no additional equipment is required.</p>
-            </div>
-            <!-- <div class="show-more-text">
-              <p class="bold">How it works</p>
-              <p>Your electricity use is measured in kilowatts and you are charged a kilowatts-per-hour (kWh) rate. That rate is lower during Off-Peak hours. It’s also different in summer months (June through September) than it is the rest of the year (October through May), as you can see in the illustration below.</p>
-            </div>
-            <img class="summer d-none d-lg-block" src="resources\images\summer.png">
-            <img class="summer-mobile d-lg-none" src="resources\images\summer-mobile.png">
-            <img class="non-summer d-none d-lg-block" src="resources\images\non summer.png">
-            <img class="non-summer-mobile d-lg-none" src="resources\images\non-summer-mobile.png">
-            <hr> -->
+              <div class="col-sm-7 left-aligned-text">
+                  <p>You can track your Shift & Save progress through your account and monthly bill. As shown on the right, your daily electric use is displayed in peak and off-peak hours. You can track month-to-month usage, too.</p>
+                  <p> We’re here to help! Check out our welcome kit, energy savings tips, FAQs, and more, as we shift & save together.</p>
+              </div>
+              <!-- <div class="col-sm-5 landing-page-usage-image">
+                  <img class="float-right" src="resources\images\DTEFauxElectricBill 1.png">
+              </div> -->
           </div>
         </div>
-      </div>
-    <div class="container col-xs-12">
-        <div class="row">
-            <div class="col-sm-7 left-aligned-text">
-                <p>You can track your Shift & Save progress through your account and monthly bill. As shown on the right, your daily electric use is displayed in peak and off-peak hours. You can track month-to-month usage, too.</p>
-                <p> We’re here to help! Check out our welcome kit, energy savings tips, FAQs, and more, as we shift & save together.</p>
-            </div>
-            <!-- <div class="col-sm-5 landing-page-usage-image">
-                <img class="float-right" src="resources\images\DTEFauxElectricBill 1.png">
-            </div> -->
-        </div>
-    </div>
     <div class="container saving-tips">
         <div class="row">
                 <div class="lined-heading col-lg-12">
@@ -175,7 +177,7 @@
         <div class="row">
             <div class="accordion col-lg-12" id="faq-accordion-container">
                 <div class="card">
-                  <div class="card-header" id="headingOne " >
+                  <div class="card-header d-flex align-items-center" id="headingOne" >
                     <div class="row">
                         <img class="plus"  src="resources\images\plus.svg">
                         <h2 class="mb-0">
@@ -185,7 +187,6 @@
                         </h2>
                     </div>
                   </div>
-              
                   <div id="collapseOne" class="collapse" aria-labelledby="headingOne" data-parent="#faq-accordion-container">
                     <div class="card-body">
                       Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
@@ -193,16 +194,25 @@
                   </div>
                 </div>
                 <div class="card">
-                  <div class="card-header" id="headingTwo ">
-                      <div class="row">
-                          <img class="plus"  src="resources\images\plus.svg">
-                          <h2 class="mb-0">
-                            <button class="btn btn-link"  type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                                Will I save money on the Shift & Save plan?
-                            </button>
-                          </h2>
-                      </div>
-                  </div>
+                    <div class="card-header d-flex align-items-center bd-highlight" id="headingTwo ">
+
+                        <div class="p-2 bd-highlight">
+                        
+                        <img class="plus" src="resources\images\plus.svg">
+                        
+                        </div>
+                        
+                        <div class="p-2 bd-highlight">
+                        
+                        <a class="btn btn-link" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo">
+                        
+                        Will I save money on the Shift &amp; Save plan?
+                        
+                        </a>
+                        
+                        </div>
+                        
+                        </div>
                   <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#faq-accordion-container">
                     <div class="card-body">
                       Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.

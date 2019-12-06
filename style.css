@@ -160,7 +160,6 @@ body {
 }
     
 .grey-title{
-    font-weight: bold;
     font-size: 16px;
     line-height: 22px;
 
@@ -192,11 +191,8 @@ body {
 
 .peak-hours-text{
     font-style: normal;
-    font-size: 26px;
+    font-size: 24px;
     line-height: 114.68%;
-    /* or 30px */
-
-
     color: #664884;
 }
 
@@ -296,6 +292,11 @@ body {
 
     color: #0072CE;
 }
+
+.FAQ-accordion .btn-link:hover{
+    text-decoration: none;
+}
+
 .FAQ-accordion .header-active .btn-link {
     color: white;
 }
@@ -309,10 +310,17 @@ body {
 }
 
 .incentives .card-text {
-    font-weight: 600;
     font-size: 18px;
     line-height: 25px;
     margin-bottom: 40px;
+}
+
+.card {
+    border-radius: unset;
+}
+
+.card-img{
+    border-radius: unset;
 }
 
 #toggleButton {
@@ -368,8 +376,7 @@ body {
 }
 
 .show-more-container .chevron {
-    margin-left: 10px;
-    margin-top: 7px;
+    margin-left: 4px;
 }
 
 .insights-app .card-text {
@@ -695,19 +702,96 @@ text-transform: capitalize;
     margin: 5px 5px 0 0;
   }
 
+  .opt-out .card {
+      border-radius: unset;
+      height: 130px;
+      padding: 5px 30px;
+  }
+
+  .opt-out-text .card-text{
+    font-size: 18px;
+    line-height: 25px;
+    color: #505357;
+  }
+
+  .opt-out .opt-out-button {
+    margin: 30px;
+    width: 300px;
+  }
+
+  .opt-out-incentives img {
+    height: 240px;
+  }
+
+  .btn-outline-primary {
+    border-radius: unset;
+    color: #0072CE;
+    border-color: #0072CE;
+    margin-right: 20px;
+  }
+
+  .btn-outline-primary:hover {
+    color: #fff;
+    background-color: #1E3575;
+    border-color: #1E3575;
+  }
+
+  .opt-out-confirm {
+    display: block;
+    margin-left: 20%;
+    margin-right: auto;
+  }
+
+  /* Tablet and Desktop */
   @media screen and (min-width:576px){
 
     .peak-hours-container{
-        margin: 70px 0;
+        margin: 65px 0;
     }
 
     .FAQ-accordion .card-header{
-        width: 950px;
         height: 50px;
+    }
+
+    .FAQ-accordion .card-header img {
+        margin-left: 15px;
+        margin-bottom: 3px;
+    }
+
+    .opt-out-incentives .card-body {
+        padding-top: 7%;
     }
   }
 
+   /* Desktop */
+
+   @media (min-width: 1281px) {
+  
+    .peak-hours-container {
+        margin-left: -40px;
+    }
+
+    .incentives-text .card-body {
+        margin-top: 3%;
+    }
+    
+  }
+
+
+  /* Mobile */
   @media screen and (max-width:576px){
+
+    .peak-hours-text-bold {
+        margin-bottom: .5rem;
+    }
+
+    .lined-heading h2::before{
+        content: none;
+    }
+
+    .lined-heading h2::after{
+        content: none;
+    }
 
     .landing-page-hero {
         display: block;
@@ -766,6 +850,7 @@ text-transform: capitalize;
 
     .landing-page-program-video{
         order:2;
+        padding: 0;
     }
 
     .peak-hours-img {

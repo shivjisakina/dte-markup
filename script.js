@@ -55,19 +55,22 @@ function toggleTerms()
  });
 
  
- $('.btn-link').on('click', function(){
+ $('.card').click(function(){
      var $this = $(this);
-    console.log( $this.text());
-     if($this.parent().sibling().child().hasClass('plus')){
+     console.log($this.children().children().children())
+     if($this.children().hasClass('collapse')){
        console.log("hi")
-        $this.parent().parent().parent().addClass('header-active');
-        $this.parent().siblings('.plus').attr('src','resources/images/minus.png');
-        $this.parent().siblings('.plus').addClass('minus');
-        $this.parent().siblings('.plus').removeClass('plus');
-     } else {
-        $this.parent().parent().parent().removeClass('header-active');
-        $this.parent().siblings('.minus').addClass('plus');
-        $this.parent().siblings('.plus').attr('src','resources/images/plus.svg');
+       $this.children('.card-header').addClass('header-active');
+       $this.children('.card-header').children(".icon-div").children().attr('src','resources/images/minus.png');
+       $this.children('.card-header').children(".icon-div").children().addClass('minus');
+       $this.children('.card-header').children(".icon-div").children().removeClass('plus');
+       $this.children().removeClass('collapse')
+     } else if ($this.children().children().children().attr('aria-expanded')){
+      console.log($this.children().children().children())
+      console.log("hello")
+      $this.children('.card-header').removeClass('header-active');
+      $this.children('.card-header').children(".icon-div").children().addClass('plus');
+      $this.children('.card-header').children(".icon-div").children().attr('src','resources/images/plus.svg');
      }
  });
 

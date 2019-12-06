@@ -196,6 +196,10 @@ body {
     color: #664884;
 }
 
+.peak-hours-list {
+    padding-left: inherit;
+}
+
 .show-more, .show-less{
     font-style: normal;
     font-weight: bold;
@@ -299,6 +303,10 @@ body {
 
 .FAQ-accordion .header-active .btn-link {
     color: white;
+}
+
+a:not([href]):not([tabindex]):hover {
+    color: #0072CE;
 }
 
 .FAQ-accordion .card-header h2 {
@@ -696,6 +704,7 @@ text-transform: capitalize;
     transform: rotate(45deg);
   }
 
+  
   .accept .check-box-container .checkmark {
     top: 0;
     left: 0;
@@ -741,6 +750,13 @@ text-transform: capitalize;
     margin-left: 20%;
     margin-right: auto;
   }
+
+  .carousel-control img{
+    width: 20px;
+    height: 36px;
+    opacity: 1;
+}
+
 
   /* Tablet and Desktop */
   @media screen and (min-width:576px){
@@ -860,6 +876,22 @@ text-transform: capitalize;
         margin-top: 25px;
     }
 
+    .incentives .card {
+        border: none;
+    }
+
+    .insights-app .card {
+        border: none;
+    }
+
+    .incentives .incentives-text .card-body {
+        padding: 1.25rem 0;
+    }
+
+    .insights-container{
+        padding: 0;
+    }
+
     .no-gutters .incentives-text {
         order: 2;
     }
@@ -894,4 +926,11 @@ text-transform: capitalize;
         width: auto;
         height: auto;
     }
+
+    .download-tips-container {
+        width: 55%;
+        margin: 0 auto;
+    }
+
+    
   }

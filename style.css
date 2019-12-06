@@ -790,6 +790,11 @@ text-transform: capitalize;
     .incentives-text .card-body {
         margin-top: 3%;
     }
+       
+   show-more-container .chevron {
+    margin-left: 8px;
+    margin-top: 8px;
+}
     
   }
 

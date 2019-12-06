@@ -88,9 +88,8 @@ a {
     font-weight: normal;
     font-size: 54px;
     line-height: 74px;
-    text-align: right;
-    margin-top: 80px;
-    margin-bottom: 100px;
+    text-align: left;
+    margin: 10% 0 0 15%;
 
 }
 
@@ -148,6 +147,16 @@ body {
 }
 
 .btn-primary:disabled {
+    background-color: #0C2340;
+    border-color: #0C2340;
+}
+
+.btn-primary:disabled:hover {
+    background-color: #0C2340;
+    border-color: #0C2340;
+}
+
+.btn.disabled {
     background-color: #0C2340;
     border-color: #0C2340;
 }
@@ -313,8 +322,12 @@ a:not([href]):not([tabindex]):hover {
     margin: -4px 0 4px 5px;
 }
 
-.more-info .summer {
-    margin-bottom: 80px;
+.more-info img {
+    margin-bottom: 45px;
+}
+
+.more-info .row {
+    margin-top: 30px;
 }
 
 .incentives .card-text {
@@ -371,7 +384,7 @@ a:not([href]):not([tabindex]):hover {
 .download-tips-container .download-image {
     width: 25px;
     height: 30px;
-    margin-right: 15px;
+    margin-right: 10px;
 }
 
 .chevron {
@@ -558,7 +571,7 @@ text-transform: capitalize;
 }
 
 .confirm-text {
-    padding: 30px;
+    padding: 12px 0;
 }
 
 .confirm-text p {
@@ -643,10 +656,6 @@ text-transform: capitalize;
   .remember-me {
     margin-right: 5px;
   }
-
-  .check-box-text {
-    margin: 10px;
-  }
   
   /* Hide the browser's default checkbox */
   .check-box-container input {
@@ -711,12 +720,6 @@ text-transform: capitalize;
     margin: 5px 5px 0 0;
   }
 
-  .opt-out .card {
-      border-radius: unset;
-      height: 130px;
-      padding: 5px 30px;
-  }
-
   .opt-out-text .card-text{
     font-size: 18px;
     line-height: 25px;
@@ -751,6 +754,10 @@ text-transform: capitalize;
     margin-right: auto;
   }
 
+  .opt-out-confirm .btn-outline-primary:focus {
+    box-shadow: unset;
+  }
+
   .carousel-control img{
     width: 20px;
     height: 36px;
@@ -761,6 +768,10 @@ text-transform: capitalize;
   /* Tablet and Desktop */
   @media screen and (min-width:576px){
 
+    .check-box-text {
+        margin: 10px;
+      }
+
     .peak-hours-container{
         margin: 65px 0;
     }
@@ -770,18 +781,22 @@ text-transform: capitalize;
     }
 
     .FAQ-accordion .card-header img {
-        margin-left: 15px;
         margin-bottom: 3px;
     }
 
     .opt-out-incentives .card-body {
         padding-top: 7%;
     }
+    .opt-out .card {
+        border-radius: unset;
+        height: 130px;
+        padding: 5px 30px;
+    }
   }
 
    /* Desktop */
 
-   @media (min-width: 1281px) {
+   @media (min-width: 1170px) {
   
     .peak-hours-container {
         margin-left: -40px;
@@ -791,16 +806,25 @@ text-transform: capitalize;
         margin-top: 3%;
     }
        
-   show-more-container .chevron {
-    margin-left: 8px;
-    margin-top: 8px;
-}
+   .shift-row .chevron {
+        margin-left: 8px;
+        margin-top: 8px;
+    }
+
+    .landing-page-program-text {
+        margin-left: -5%;
+    }
     
   }
 
 
   /* Mobile */
   @media screen and (max-width:576px){
+
+    .badges {
+        display: inline-flex;
+        margin: -5%;
+    }
 
     .peak-hours-text-bold {
         margin-bottom: .5rem;
@@ -849,9 +873,9 @@ text-transform: capitalize;
         left: 0;
         top: 0;
         line-height: 27px;
-        text-align: right;
+        text-align: left;
         position: relative;
-        margin: 35px 148px 10px 0px;
+        margin: 35px 30% 10px 8%;
     }
 
     .landing-page-program .program-title {
@@ -919,8 +943,17 @@ text-transform: capitalize;
         padding: unset;
     }
     .modal-2 .modal-body .user{
-        margin: unset;
+        margin: 15px 0 30px 0;
     }
+
+    .opt-out-confirm{
+        margin-left: 0;
+    }
+
+    .opt-out-confirm button {
+        margin-bottom: 10px;
+    }
+
     .shift-row{
         display: inline-block;
         padding-bottom: 20px;
@@ -937,5 +970,8 @@ text-transform: capitalize;
         margin: 0 auto;
     }
 
+    .FAQ-accordion .btn-link {
+        text-align: left;
+    }
     
   }

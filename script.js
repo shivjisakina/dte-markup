@@ -65,7 +65,7 @@ function toggleTerms()
        $this.children('.card-header').children(".icon-div").children().addClass('minus');
        $this.children('.card-header').children(".icon-div").children().removeClass('plus');
        $this.children().removeClass('collapse')
-     } else if ($this.children().children().children().attr('aria-expanded')){
+     }else if (!$this.children().hasClass('collapse')){
       console.log($this.children().children().children())
       console.log("hello")
       $this.children('.card-header').removeClass('header-active');

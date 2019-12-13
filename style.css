@@ -111,29 +111,22 @@ body {
     position: relative;
 }
 
-.landing-page-program-video a:after {
-    background: url("resources/images/play-btn.png") center center no-repeat;
-    bottom: 0;
-    content: "";
-    display: block;
-    left: 0;
-    position: absolute;
-    right: 0;
-    top: 0;
+.video {
+    width: 100%;
 }
-
-.landing-page-program-video a:hover:after {
-    background-image: url("resources/images/play-btn.png");
+.wrapper{
+    display:table;
+    width:auto;
+    position:relative;
 }
-
-.landing-page-program .landing-page-program-video .playpause {
-    background-image: url(http://png-4.findicons.com/files/icons/2315/default_icon/256/media_play_pause_resume.png);
+.playpause {
+    background-image:url("resources/images/play-btn.png");
     background-repeat: no-repeat;
-    width: 50%;
+    width: 15%;
     height: 50%;
     position: absolute;
     left: 0%;
-    right: 0%;
+    right: 10%;
     top: 0%;
     bottom: 0%;
     margin: auto;
@@ -307,10 +300,6 @@ body {
     color: #0072CE;
 }
 
-.FAQ-accordion .btn-link:hover {
-    text-decoration: none;
-}
-
 .FAQ-accordion .header-active .btn-link {
     color: white;
 }
@@ -321,6 +310,14 @@ a:not([href]):not([tabindex]):hover {
 
 .FAQ-accordion .card-header h2 {
     margin: -4px 0 4px 5px;
+}
+
+.FAQ-accordion .btn-link:hover {
+    text-decoration: none;
+}
+
+.FAQ-accordion .header-active .btn-link:hover {
+    color: white;
 }
 
 .more-info img {
@@ -364,9 +361,6 @@ a:not([href]):not([tabindex]):hover {
     margin-bottom: 45px;
 }
 
-.landing-page-program-video .playpause {
-    background-image: url("resources/images/play-btn.png");
-}
 
 .download-tips {
     color: #0072CE;
@@ -767,6 +761,36 @@ a:not([href]):not([tabindex]):hover {
     opacity: 1;
 }
 
+.carousel-inner .card {
+    width: auto;
+    height: 375px;
+    max-height: 375px;
+}
+
+.carousel .card h5 {
+    font-weight: bold;
+    font-size: 18px;
+    margin-bottom: 25px;
+    margin-top: 10px;
+}
+
+.carousel-control-prev {
+    width: auto;
+    margin-left: -5%;
+}
+
+.carousel-control-next {
+    width: auto;
+    margin-right: -5%;
+}
+
+.carousel-inner .carousel-item {
+    -webkit-transition: 0s !important;
+    -o-transition: 0s !important;
+    transition: 0s !important;
+}
+
+
 
 /* Tablet and Desktop */
 @media screen and (min-width:576px) {
@@ -824,6 +848,11 @@ a:not([href]):not([tabindex]):hover {
 
 /* Mobile */
 @media screen and (max-width:576px) {
+
+    .playpause {
+        width: 25%;
+        right: 0%;
+    }
 
     .badges {
         display: inline-flex;
@@ -979,6 +1008,107 @@ a:not([href]):not([tabindex]):hover {
 
     .FAQ-accordion .btn-link {
         text-align: left;
+    }
+
+    .carousel-control-prev {
+        display: none;
+    }
+
+    .carousel-control-next {
+        display: none;
+    }
+
+    .carousel,
+    .carousel-inner,
+    .carousel-inner>.item {
+        overflow: hidden;
+    }
+
+    .carousel-inner:before {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        right: 62%;
+        left: 0;
+        content: "";
+        display: block;
+        z-index: 2;
+    }
+
+    .carousel-inner:after {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        right: 0;
+        left: 72%;
+        content: "";
+        display: block;
+        z-index: 2;
+    }
+
+}
+
+@media (min-width: 768px) {
+
+    /* show 3 items */
+    .carousel-inner .active,
+    .carousel-inner .active+.carousel-item,
+    .carousel-inner .active+.carousel-item+.carousel-item {
+        display: block;
+    }
+
+    .carousel-inner .carousel-item.active:not(.carousel-item-right):not(.carousel-item-left),
+    .carousel-inner .carousel-item.active:not(.carousel-item-right):not(.carousel-item-left)+.carousel-item,
+    .carousel-inner .carousel-item.active:not(.carousel-item-right):not(.carousel-item-left)+.carousel-item+.carousel-item {
+        transition: none;
+        margin-right: initial;
+    }
+
+    .carousel-inner .carousel-item-next,
+    .carousel-inner .carousel-item-prev {
+        position: relative;
+        transform: translate3d(0, 0, 0);
+    }
+
+    .carousel-inner .active.carousel-item+.carousel-item+.carousel-item+.carousel-item {
+        position: absolute;
+        top: 0;
+        right: -33.3333%;
+        z-index: -1;
+        display: block;
+        visibility: visible;
+    }
+
+    /* left or forward direction */
+    .active.carousel-item-left+.carousel-item-next.carousel-item-left,
+    .carousel-item-next.carousel-item-left+.carousel-item,
+    .carousel-item-next.carousel-item-left+.carousel-item+.carousel-item,
+    .carousel-item-next.carousel-item-left+.carousel-item+.carousel-item+.carousel-item {
+        position: relative;
+        transform: translate3d(-100%, 0, 0);
+        visibility: visible;
+    }
+
+    /* farthest right hidden item must be abso position for animations */
+    .carousel-inner .carousel-item-prev.carousel-item-right {
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: -1;
+        display: block;
+        visibility: visible;
+    }
+
+    /* right or prev direction */
+    .active.carousel-item-right+.carousel-item-prev.carousel-item-right,
+    .carousel-item-prev.carousel-item-right+.carousel-item,
+    .carousel-item-prev.carousel-item-right+.carousel-item+.carousel-item,
+    .carousel-item-prev.carousel-item-right+.carousel-item+.carousel-item+.carousel-item {
+        position: relative;
+        transform: translate3d(100%, 0, 0);
+        visibility: visible;
+        display: block;
+        visibility: visible;
     }
 
 }

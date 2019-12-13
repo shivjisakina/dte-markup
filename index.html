@@ -35,14 +35,12 @@
     <div class="container col-xs-12 landing-page-program">
       <div class="row">
         <div class="col-sm-6 landing-page-program-video">
-          <video width="480" height="270" poster="resources\images\video-thumbnail.png" controls>
-            <source src="video.mp4" type="video/mp4">
-            <source src="video.ogg" type="video/ogg">
-            <source src="video.webm" type="video/webm">
-            <object data="video.mp4" width="480" height="270">
-              <embed src="video.swf" width="480" height="270">
-            </object>
-          </video>
+          <div class="wrapper">
+            <video class="video" width="480" height="270" poster="resources\images\video-thumbnail.png" controls>
+                <source src="http://e14aaeb709f7cde1ae68-a1d0a134a31b545b257b15f8a8ba5726.r70.cf3.rackcdn.com/projects/31432/1427815464209-bf74131a7528d0ea5ce8c0710f530bb5/1280x720.mp4" type="video/mp4" />
+            </video>
+          </div>
+          <div class="playpause"></div>
         </div>
         <div class="col-sm-5 landing-page-program-text">
           <h1 class="program-title">Shift & Save Pilot Program</h1>
@@ -56,14 +54,6 @@
         </div>
         <div class="col"></div>
       </div>
-    </div>
-    <div class="container-fluid col-sm-12 landing-page-program-video d-none d-sm-block d-lg-none">
-      <video controls poster="resources\images\video-thumbnail.png">
-        <source src="#" type="video/mp4">
-        <source src="#" type="video/ogg">
-        Your browser does not support the video tag.
-        <div class="playpause"></div>
-      </video>
     </div>
     <div class="container">
       <p class="grey-title font-weight-bold">Choose the Hours You Use Power</p>
@@ -157,47 +147,149 @@
       </div>
     </div>
     <div class="container saving-tips">
-      <div class="row">
+      <div class="row blog">
         <div class="lined-heading col-lg-12">
           <h2>Savings Tips</h2>
         </div>
       </div>
-      <div class="row">
-        <div class="card-deck">
-          <div class="card">
-            <img class="card-img-top" src="resources\images\blue-carousel.png" alt="Card image cap">
-            <div class="card-body">
-              <h5 class="card-title">Appliances</h5>
-              <p class="card-text">
-                Run your dishwasher, air conditioner and clothes washer before 3 p.m. and after 7 p.m. to lower your
-                bill. </p>
+      <div id="carouselExample" class="carousel slide" data-ride="carousel" data-touch="true" data-interval="false">
+        <div class="carousel-inner row w-10 mxauto" role="listbox">
+          <div class="carousel-item col-md-4 active">
+            <div class="card-deck">
+              <div class="card">
+                <img class="card-img-top" src="resources\images\appliances.png" alt="Card image cap">
+                <div class="card-body">
+                  <h5 class="card-title">Appliances</h5>
+                  <p class="card-text">
+                    Run your dishwasher, air conditioner and clothes washer before 3 p.m. and after 7 p.m. to lower your
+                    bill.
+                  </p>
+                </div>
+              </div>
             </div>
           </div>
-          <div class="card">
-            <img class="card-img-top" src="resources\images\green-carousel.png" alt="Card image cap">
-            <div class="card-body">
-              <h5 class="card-title">Cooling Your Home</h5>
-              <p class="card-text">
-                Begin cooling your home before Peak Hours begin at 3 p.m. on weekdays. Then, raise the temperature by
-                just four degrees during the Peak period. You’ll stay cool and save.
-              </p>
+          <div class="carousel-item col-md-4">
+            <div class="card-deck">
+              <div class="card">
+                <img class="card-img-top" src="resources\images\cooling.png" alt="Card image cap">
+                <div class="card-body">
+                  <h5 class="card-title">Cooling Your Home</h5>
+                  <p class="card-text">
+                    Begin cooling your home before Peak Hours begin at 3 p.m. on weekdays. Then, raise the temperature
+                    by just four degrees during the Peak period. You’ll stay cool and save.
+                  </p>
+                </div>
+              </div>
             </div>
           </div>
-          <div class="card">
-            <img class="card-img-top" src="resources\images\purple-carousel.png" alt="Card image cap">
-            <div class="card-body">
-              <h5 class="card-title">Heating Your Home</h5>
-              <p class="card-text">
-                Set your thermostat between 68 and 70 degrees when you're home and at 65 degrees or lower when you're
-                away. You can save around 3% on heating costs for each degree you lower your thermostat.
-              </p>
+          <div class="carousel-item col-md-4">
+            <div class="card-deck">
+              <div class="card">
+                <img class="card-img-top" src="resources\images\heating.png" alt="Card image cap">
+                <div class="card-body">
+                  <h5 class="card-title">Heating Your Home</h5>
+                  <p class="card-text">
+                    Set your thermostat between 68 and 70 degrees when you're home and at 65 degrees or lower when
+                    you're away. You can save around 3% on heating costs for each degree you lower your thermostat.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="carousel-item col-md-4">
+            <div class="card-deck">
+              <div class="card">
+                <img class="card-img-top" src="resources\images\habit.png" alt="Card image cap">
+                <div class="card-body">
+                  <h5 class="card-title">Make a Habit of Saving</h5>
+                  <p class="card-text">
+                    Unplug non-essential appliances when you’re not using them. They draw power just by being plugged
+                    in. You can reduce up to 10% of electricity use by unplugging appliances and devices when you’re not
+                    using them.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="carousel-item col-md-4">
+            <div class="card-deck">
+              <div class="card">
+                <img class="card-img-top" src="resources\images\lighting.png" alt="Card image cap">
+                <div class="card-body">
+                  <h5 class="card-title">Lighting</h5>
+                  <p class="card-text">
+                    Install LED bulbs to save energy and money. ENERGY STAR®-certified lighting uses up to 90% less
+                    energy than traditional incandescent bulbs.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="carousel-item col-md-4">
+            <div class="card-deck">
+              <div class="card">
+                <img class="card-img-top" src="resources\images\dishwasher.png" alt="Card image cap">
+                <div class="card-body">
+                  <h5 class="card-title">Dishwasher</h5>
+                  <p class="card-text">
+                    Run full loads in your dishwasher. About the same amount of energy and water are used in each wash,
+                    regardless of the load size.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="carousel-item col-md-4">
+            <div class="card-deck">
+              <div class="card">
+                <img class="card-img-top" src="resources\images\thermometer.png" alt="Card image cap">
+                <div class="card-body">
+                  <h5 class="card-title">Programmable Thermostat</h5>
+                  <p class="card-text">
+                    Install a programmable thermostat to automatically adjustyour home temperatureduring Peak and
+                    Off-Peak Hours. </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="carousel-item col-md-4">
+            <div class="card-deck">
+              <div class="card">
+                <img class="card-img-top" src="resources\images\dryer.png" alt="Card image cap">
+                <div class="card-body">
+                  <h5 class="card-title">Clothes Dryer</h5>
+                  <p class="card-text">
+                    Fill up your clothes dryer, but don't overload it. The dryer needs space for air circulation to
+                    efficiently dry fabrics. And did you know that a longer drying cycle on a low heat setting uses less
+                    energy? </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="carousel-item col-md-4">
+            <div class="card-deck">
+              <div class="card">
+                <img class="card-img-top" src="resources\images\washer.png" alt="Card image cap">
+                <div class="card-body">
+                  <h5 class="card-title">Clothes Washer</h5>
+                  <p class="card-text">
+                    Use the cold water setting whenever possible. Heating the water can account for up to 90% of the
+                    energy it takes to operate a clothes washer. </p>
+                </div>
+              </div>
             </div>
           </div>
         </div>
+        <a class="carousel-control-prev" href="#carouselExample" role="button" data-slide="prev">
+          <img src="resources\images\l-chev-carousel.png" aria-hidden="true" data-target="#carouselExample" />
+        </a>
+        <a class="carousel-control-next" href="#carouselExample" role="button" data-slide="next">
+          <img src="resources\images\r-chev-carousel.png" data-target="#carouselExample" />
+        </a>
       </div>
       <div class="row download-tips-container">
         <img class="download-image d-none d-sm-block" src="resources\images\download-tips.png">
-        <p class="download-tips">Download all tips</p>
+        <a class="download-tips" href="resources\Tips-PDF.pdf" download="DTE-Savings-Tips">Download all tips</a>
         <img class="chevron" src="resources\images\r-chev.png">
       </div>
     </div>
@@ -210,7 +302,7 @@
       <div class="row">
         <div class="accordion col-lg-12" id="faq-accordion-container">
           <div class="card">
-            <div class="card-header d-flex align-items-center bd-highlight" id="headingOne ">
+            <div class="card-header d-flex align-items-center bd-highlight" id="headingOne">
               <div class="p-2 bd-highlight icon-div">
                 <img class="plus" src="resources\images\plus.svg">
               </div>
@@ -472,14 +564,14 @@
       <div class="insights-app">
         <div class="card mb-3">
           <div class="row no-gutters">
-            <div class="col-md-6 insights-app-video">
-              <video controls poster="resources\images\01_Insight_See_Your_Home 1.png">
-                <source src="#" type="video/mp4">
-                <source src="#" type="video/ogg">
-                Your browser does not support the video tag.
-                <div class="playpause"></div>
-              </video>
-            </div>
+                <div class="col-sm-6 insights-app-video">
+                    <div class="wrapper">
+                      <video class="video" width="480" height="270" poster="resources\images\01_Insight_See_Your_Home 1.png" controls>
+                          <source src="http://e14aaeb709f7cde1ae68-a1d0a134a31b545b257b15f8a8ba5726.r70.cf3.rackcdn.com/projects/31432/1427815464209-bf74131a7528d0ea5ce8c0710f530bb5/1280x720.mp4" type="video/mp4" />
+                      </video>
+                    </div>
+                    <div class="playpause"></div>
+                  </div>
             <div class="col-md-6">
               <div class="card-body">
                 <p class="card-text insight-app-title">DTE Insight App & Energy Bridge</p>

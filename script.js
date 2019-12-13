@@ -33,13 +33,15 @@ $(document).ready(function () {
 
   $('.card').click(function () {
     var $this = $(this);
-    console.log("first" + ($this.children().children().children()))
     if (!$this.children().hasClass('show')) {
       $this.children('.card-header').addClass('header-active');
       $this.children('.card-header').children(".icon-div").children().attr('src', 'resources/images/minus.png');
       $this.children('.card-header').children(".icon-div").children().addClass('minus');
       $this.children('.card-header').children(".icon-div").children().removeClass('plus');
       $this.children().removeClass('collapse')
+      $this.siblings().children('.card-header').removeClass('header-active');
+      $this.siblings().children('.card-header').children(".icon-div").children().addClass('plus');
+      $this.siblings().children('.card-header').children(".icon-div").children().attr('src', 'resources/images/plus.svg');
     } else if ($this.children().hasClass('show')) {
       $this.children('.card-header').removeClass('header-active');
       $this.children('.card-header').children(".icon-div").children().addClass('plus');

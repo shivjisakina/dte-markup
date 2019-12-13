@@ -554,6 +554,10 @@ a:not([href]):not([tabindex]):hover {
     padding: 50px auto;
 }
 
+.confirm-body .btn-primary {
+    height: 38px;
+}
+
 .user-text {
     margin: 25px auto 25px 25px;
 }

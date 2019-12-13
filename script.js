@@ -57,14 +57,14 @@ $(document).ready(function () {
       }
   });
 
+  if ($(document).width() <= 768) {
+
   $(".carousel-item.active").next().css({"display": "block", "left": "100%", "opacity": "0.4"});
   $('#carouselExample').on('slid.bs.carousel', function () {
     $(".carousel-item").css({"display": "none", "left": "initial"});
     $(".carousel-item.active").css({"display": "block", "left": "initial", "opacity": "1"});
     $(".carousel-item.active").next().css({"display": "block", "left": "100%", "opacity": "0.4"});
-
   })
-
-  
+}
 
 });

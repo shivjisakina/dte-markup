@@ -35,15 +35,12 @@ $(document).ready(function () {
     var $this = $(this);
     console.log("first" + ($this.children().children().children()))
     if (!$this.children().hasClass('show')) {
-      console.log("hi")
       $this.children('.card-header').addClass('header-active');
       $this.children('.card-header').children(".icon-div").children().attr('src', 'resources/images/minus.png');
       $this.children('.card-header').children(".icon-div").children().addClass('minus');
       $this.children('.card-header').children(".icon-div").children().removeClass('plus');
       $this.children().removeClass('collapse')
     } else if ($this.children().hasClass('show')) {
-      console.log("second" + ($this.children().children().children()))
-      console.log("hello")
       $this.children('.card-header').removeClass('header-active');
       $this.children('.card-header').children(".icon-div").children().addClass('plus');
       $this.children('.card-header').children(".icon-div").children().attr('src', 'resources/images/plus.svg');
@@ -59,5 +56,15 @@ $(document).ready(function () {
         $(this).children(".playpause").hide();
       }
   });
+
+  $(".carousel-item.active").next().css({"display": "block", "left": "100%", "opacity": "0.4"});
+  $('#carouselExample').on('slid.bs.carousel', function () {
+    $(".carousel-item").css({"display": "none", "left": "initial"});
+    $(".carousel-item.active").css({"display": "block", "left": "initial", "opacity": "1"});
+    $(".carousel-item.active").next().css({"display": "block", "left": "100%", "opacity": "0.4"});
+
+  })
+
+  
 
 });

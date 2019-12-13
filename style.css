@@ -849,6 +849,12 @@ a:not([href]):not([tabindex]):hover {
 /* Mobile */
 @media screen and (max-width:576px) {
 
+    .row .incentives-img {
+        width: auto;
+        margin-left: -15px;
+        margin-right: -50vw;
+    }
+
     .playpause {
         width: 25%;
         right: 0%;
@@ -1018,32 +1024,8 @@ a:not([href]):not([tabindex]):hover {
         display: none;
     }
 
-    .carousel,
-    .carousel-inner,
-    .carousel-inner>.item {
-        overflow: hidden;
-    }
-
-    .carousel-inner:before {
-        position: absolute;
-        top: 0;
-        bottom: 0;
-        right: 62%;
-        left: 0;
-        content: "";
-        display: block;
-        z-index: 2;
-    }
-
-    .carousel-inner:after {
-        position: absolute;
-        top: 0;
-        bottom: 0;
-        right: 0;
-        left: 72%;
-        content: "";
-        display: block;
-        z-index: 2;
+    .carousel-inner .carousel-item {
+        width: 70%;
     }
 
 }

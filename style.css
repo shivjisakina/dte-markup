@@ -114,15 +114,13 @@ body {
 .video {
     width: 100%;
 }
-
-.wrapper {
-    display: table;
-    width: auto;
-    position: relative;
+.wrapper{
+    display:table;
+    width:auto;
+    position:relative;
 }
-
 .playpause {
-    background-image: url("resources/images/play-btn.png");
+    background-image:url("resources/images/play-btn.png");
     background-repeat: no-repeat;
     width: 15%;
     height: 50%;
